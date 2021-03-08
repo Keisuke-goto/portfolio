@@ -1,0 +1,34 @@
+<diV class="MoniterUploadConteinner">
+  <h1 class="Moniter_heading">モニターを募集</h1>
+  <div class="Moniter_heading_box">
+   <div class="Moniter_heading_box_text">
+    <h2 class="Moniter_heading_box_heading">モニターを募集しよう</h2>
+    <p>①モニターを募集するには下のボタンから募集を投稿するか、</p>
+    <p>②モニター一覧から直接モニターにアプローチしましょう！</p>
+   </div>
+   <img src="/assets/undraw_hang_out_h9ud.svg" class="Moniter_heading_img">
+  </div>
+  <div class="Moniter_subheading_box">
+   <input class="Moniter_subheading" type="button" value="募集を投稿する" onclick="location.href='/upload/new'">
+  </div>
+</div>
+
+<h1 class="Moniter_users_heading">モニター一覧</h1>
+<div class="MoniterBigIndexConteiner">
+  <% @users.each do |user| %>
+<section class="MoniterIndexConteiner">
+   <img src="<%="/user_images/#{user.image_name}"%>" class="moniter_image" >
+   <div class="Moniter_card_content">
+    <p class="Monite_card_title"><%=user.name %></p>
+    <p class="Moniter_card_text"><%=user.self_intro%></p>
+   </div>
+   <div class="Moniter_card_link">
+    <%= link_to("プロフィール","/user/#{user.id}")%>
+   </div>
+</section>
+  <% end %>
+</div>
+<div class="user_pagenate">
+<%= paginate @users %>
+</div>
+

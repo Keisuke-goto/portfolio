@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InterViewApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= stylesheet_pack_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner_wrapper">
+        <% if @current_user %>
+            <a><%= link_to image_tag("logo", class:"homeimage"), "/upload/index" %></a>
+            <a><%= link_to("One's Voice","/upload/index",{class: "brand"})%></a>
+          <nav class="nav">
+            <a class="nav_item"><%= link_to("募集一覧", "/upload/index",{class: "navlink"}) %></a>
+            <a class="nav_item"><%= link_to("モニターを集める","/user/index",{class: "navlink"}) %></a>
+            <a class="nav_item"><%= link_to("ログアウト","/logout",{method: :post,class: "navlink"}) %></a>
+            <a class="nav_item"><%= link_to image_tag( "/user_images/#{@current_user.image_name}", class:"userimage"), "/user/#{@current_user.id}/edit" %></a>
+          </nav>
+        <% else %>
+            <a><%= link_to image_tag("logo", class:"homeimage"), "/" %></a>
+            <a><%= link_to("One's Voice","/",{class: "brand"})%></a>
+          <nav class="nav">
+            <a class="nav_item"><%= link_to("ログイン", "/login",{class: "navlink"}) %></a>
+            <a class="nav_item"><%= link_to("新規登録", "/singup",{class: "navlink"}) %></a>
+          </nav>
+        <% end %>
+      </div>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

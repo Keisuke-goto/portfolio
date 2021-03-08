@@ -1,0 +1,24 @@
+<div class="editwrapper">
+      <div class="edittitle">プロフィール</div>
+      <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+      <%= form_tag("/user/#{@user.id}/update", {multipart: true}) do%>
+       <img class="usereditimg" src="<%= "/user_images/#{@current_user.image_name}"%>"/>
+       <div class="edittextwrapper">
+        <p class="editinputtitle">ユーザー名</p>
+        <input class="editptag"name= "name" value="<%= @user.name%>">
+        <p class="editinputtitle">画像</p>
+        <input class="editimg"name="image" type="file">
+        <p class="editinputtitle">メールアドレス</p>
+        <input class="editptag"name= "email" value="<%= @user.email%>">
+        <p class="editinputtitle">公開用プロフィール(400字以内)</p>
+        <textarea class="editptag_selfintro" name= "self_intro" maxlength="400"><%= @user.self_intro%></textarea>
+        <div class="editsend">
+        <input type="submit" value="更新">
+        </div>
+        </div>
+        <%end%> 
+</div>

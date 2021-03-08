@@ -1,0 +1,20 @@
+<div class="chatwrapper">
+ <h1>チャット</h1>
+ <div class="chatwrapperoaite"><h2><%= @user.name%></h2></div>
+ <div class="chatfield">
+  <% @chats.each do |chat| %>
+      <div class="chatarea"> 
+          <img src="<%="/user_images/#{chat.user.image_name}"%>" class="chatimage">
+          <p class="chatfukidashi"><%= chat.message %></p>
+      </div>
+  <% end %>
+ </div>
+</div>
+
+<div class="chatsubmit">
+<%= form_with model: @chat do |f| %>
+    <%= f.text_field :message %>
+    <%= f.hidden_field :room_id %>
+    <%= f.submit "送信する"%>
+<% end %>
+</div>

@@ -1,0 +1,159 @@
+/* 投稿一覧ページ ================================ */
+.uploads-index{
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+.uploadcontainer{
+    width: 60%;
+    height: 200px;
+    background-color: skyblue;
+    box-shadow: 0 0 8px gray;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+}
+.titleupload{ 
+    display: flex;
+}
+.uploadsabtitle{
+    padding-top: 20px;
+}
+.uploadcontentwrapper{
+    width: 750px;
+    height: auto;
+}
+.uploadtitle{
+    font-size: 40px;
+    color: rgb(6, 174, 240);
+    margin-left: 20%;
+}
+.uploadtitilecontent{
+    font-size: 20px;
+    padding-top: 17px;
+    padding-left: 10px;
+    color: white;
+}
+.uploadmoniter{
+    display: flex;
+}
+.uploadmonitercontent{
+    color: white;
+}
+.uploaduserwrapper{
+    width: 150px;
+    height: auto;
+    text-align: center;
+    padding-top: 25px;
+}
+.upload_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+.uploadusername{
+    color: white;
+}
+.uploads-index-item{
+    color: white;
+}
+/* 投稿ページ ================================ */
+.NewUploadcontainer{
+    width: 480px;
+    height: 650px;
+    background-color: skyblue;
+    margin: auto;
+    border-radius: 10px;
+}
+.NewUploadtitle{
+    color: white;
+    font-size: 35px;
+    margin-top: 10%;
+    padding-top: 10px;
+    text-align: center; 
+}
+.NewUploadSend{
+    display: flex;
+    text-align: left;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+.NewUploadTitle{
+    color: white;
+    font-size: 20px;
+    margin-top: 5px; 
+    text-align: left;
+    margin-left: 70px;
+}
+.NewUploadinputstyle{
+    border-radius: 3px;
+    border: 2px solid lightgray;
+    padding: 0.3em; 
+    font-size: 15px;
+    text-align: left;
+    margin-left: 70px;
+}
+.NewUploadContentstyle{
+    border-radius: 3px;
+    border: 2px solid lightgray;
+    text-align: left;
+    margin-left: 70px;
+    width: 340px;
+    height: 200px;
+}
+.NewUploadform-error{
+    color: rgb(247, 91, 80);
+    font-size: 20px;
+    text-align: center;
+}
+/* 投稿詳細ページ ================================ */
+.UploadShowtitlecontainer{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    background-color: skyblue;
+    box-shadow: 0 0 8px gray;
+    display: flex;
+}
+.UploadshowUser{
+    width: 650px;
+    height: auto;
+    text-align: center;
+    display: flex;
+}
+.Uploadshowimg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.Uploadshowname{
+    color: white;
+    font-size: 20px;
+    margin-top: 100px;
+}
+.UploadShowtitletitilecontent{
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.UploadShowTargetmoniter{
+    color: white;
+    padding-left: 20px;
+}
+.UploadShowContent{
+    padding-left: 20px;
+}
+.UploadShowButton{
+    text-align: center;
+    margin-top:  50px;
+    padding-right: 20px;
+}
+.pagination{
+    margin: auto;
+    font-size: large;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}

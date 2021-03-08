@@ -1,0 +1,21 @@
+ <div class="NewUploadcontainer">
+    <h1 class="NewUploadtitle">募集する</h1>
+    <%= form_tag("/upload/create") do %>
+      <div class="form">
+        <div class="NewUploadform-body">
+          <% @upload.errors.full_messages.each do |message| %>
+            <div class="NewUploadform-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <p class="NewUploadTitle">タイトル</p>
+          <input class="NewUploadinputstyle" name="title"size="30%" >
+          <p class="NewUploadTitle">対象者</p>
+          <input class="NewUploadinputstyle" name="target"size="30%" >
+          <p class="NewUploadTitle">募集内容（600字以内）</p>
+          <textarea class="NewUploadContentstyle" name="content"><%= @upload.content %></textarea>
+          <input class="NewUploadSend"type="submit" value="投稿" maxlength="600">
+        </div>
+      </div>
+    <% end %>
+  </div>

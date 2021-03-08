@@ -1,0 +1,19 @@
+<div class="logincontainer">
+  <div class="login_form">
+   <p>ログイン</p>
+   <% if @error_message %>
+   <div class="form-error">
+    <%= @error_message %>
+   </div>
+    <% end %>
+    <%= form_tag("/login") do%>
+      <p class="sendtexttitle">メールアドレス</p>
+          <input class="inputstyle"name="email" value="<%= @email%>" size="30%" placeholder="info.One'Voice@.com">
+      <p class="sendtexttitle">パスワード</p>
+      <div class="passwordsend">
+          <input class="inputstyle" name="password" value="<%= @password%>" type=password size="30%" >
+          <div class="passwordsend">
+          <input type="submit" value="ログイン" class="sendtexttitlesned">
+    <% end %> 
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="uploads-index">
+    <p class="uploadtitle">投稿一覧のページ</p>
+    <% @upload.each do |upload| %>
+    <div class="uploadcontainer">
+     <div class="uploaduserwrapper">
+      <div class="upload_image">
+        <img src="<%= "/user_images/#{upload.user.image_name}"%>" class="upload_image">
+      </div>
+      <div>
+        <%= link_to(upload.user.name, "/user/#{upload.user.id}",{class: "uploadusername"})%>
+      </div>
+      </div>
+      <div class="uploadcontentwrapper">
+      <div class="titleupload">
+      <p class="uploadsabtitle">【タイトル】</p>
+      <p class="uploadtitilecontent"><%= upload.title%></p>
+      </div>
+      <div class="uploadmoniter">
+      <p>【対象者】</p>
+      <p class="uploadmonitercontent"><%= upload.target%></p>
+      </div>
+      <div class="uploads-index-item">
+        <%= link_to("#{upload.content}    続きを読む→", "/upload/#{upload.id}",{class: "uploads-index-item"}) %>
+      </div>
+      </div>
+    </div>
+    <% end %>
+    <div class="pagination"> 
+    <%= paginate @upload %>
+    <div>
+</div>

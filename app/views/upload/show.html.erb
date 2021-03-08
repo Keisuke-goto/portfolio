@@ -1,0 +1,26 @@
+  <div class="UploadShowtitlecontainer">
+    <div class="UploadshowUser">
+      <img class="Uploadshowimg"src="<%= "/user_images/#{@user.image_name}"%>">
+      <%= link_to(@user.name, "/user/#{@user.id}", {class: "Uploadshowname"})%>
+    </div>
+    <div class="UploadShowContentWraper">
+      <div>
+       <p class="UploadShowtitle">【タイトル】</p>
+       <p class="UploadShowtitletitilecontent"><%= @upload.title%></p>
+      </div>
+      <div class="UploadShowtitlemoniter">
+       <p>【対象者】</p>
+       <p class="UploadShowTargetmoniter"><%= @upload.target%></p>
+      </div>
+      <div>
+       <p>【募集内容】</p>
+       <p class="UploadShowContent"><%= @upload.content %></p>
+      </div> 
+    </div>
+  </div>
+  <% if @current_user.id != @upload.user_id %>
+   <div class="UploadShowButton">
+    <input class="Moniter_subheading" type="button" value="メッセージを送る" onclick="location.href='<%=chat_path(@upload.user_id) %>'">
+   </div>
+  <%end%>
+ 

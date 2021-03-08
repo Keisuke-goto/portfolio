@@ -1,0 +1,39 @@
+<div class="UserShowConteiner">
+    <div class="UserShowName">
+      <img src="<%="/user_images/#{@user.image_name}"%>" class="UserShowImg">
+      <h1><%= @user.name %></h1>
+    </div>
+    <div class="UserShowIntro">
+      <h1>プロフィール</h1>
+      <div class="UserShowTextfield">
+      <p><%=@user.self_intro %></p>
+      </div>
+    </div>
+    <div class="UserShowUpdates">
+      <h2>過去の投稿</h2>
+      <% @user.uploads.each do |upload|%>
+      <div class="UserShowContentWraper">
+        <div class="UserShowtitlemoniter">
+         <p class="UserShowtitle">【タイトル】</p>
+         <p class="UserShowContent"><%=upload.title %></p>
+        </div>
+        <div class="UserShowtitlemoniter">
+         <p>【対象者】</p>
+         <p class="UserShowContent"><%=upload.target %></p>
+        </div>
+        <div>
+         <p>【募集内容】</p>
+         <div class="UserShowMain">
+          <p class="UserShowMainContent"><%=upload.content %></p>
+          <%=link_to("→詳細","/upload/#{upload.id}",{class: "UserShowLink"})%>
+         </div>
+        </div>
+      </div>
+      <%end %>
+    </div>
+    <div class="UserShowSend">
+     <% if @current_user != @user %>
+      <input class="Moniter_subheading" type="button" value="メッセージを送る" onclick="location.href='<%=chat_path(@user.id) %>'">
+     <% end %>
+    </div>
+</div>

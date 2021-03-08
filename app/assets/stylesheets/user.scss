@@ -1,0 +1,265 @@
+/* 新規登録画面 ================================ */
+.form-body{
+    width: 400px;
+    height: 500px;
+    background-color: skyblue;
+    margin: auto;
+    border-radius: 10px;
+}  
+.form-heading{
+    color: white;
+    font-size: 25px;
+    margin-top: 10%;
+    text-align: center;
+}
+.inputstyle{
+    border-radius: 3px;
+    border: 2px solid lightgray;
+    padding: 0.3em; 
+    font-size: 15px;   
+}
+.sendtexttitle{
+    font-size: 20px;
+    margin-top: 5px; 
+    text-align: left;
+    margin-left: 70px;
+}
+.sendtexttitlesned{
+    background-color: white;
+    font-size: 20px; 
+    font-weight: 400;
+    font-family: Tahoma;
+    border: 2px solid white;
+    margin-top: 15px;
+}
+.form-error{
+    color: rgb(247, 91, 80);
+}
+/* ログイン画面 ================================ */
+.logincontainer{
+    width: 400px;
+    height: 400px;
+    background-color: skyblue;
+    margin: auto;
+    border-radius: 10px;
+}
+.login_form{
+    color: white;
+    font-size: 25px;
+    margin-top: 10%;
+    text-align: center;
+}
+/* 編集画面 ================================ */
+.editwrapper{
+    width: 480px;
+    height: 770px;
+    background-color: skyblue;
+    margin: auto;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+.edittextwrapper{
+    margin-top: 15px;
+}
+.edittitle{
+   color: white;
+    font-size: 25px;
+    margin-top: 10%;
+    text-align: center; 
+}
+.editptag{
+    border-radius: 3px;
+    border: 2px solid lightgray;
+    padding: 0.3em; 
+    font-size: 15px;
+    text-align: left;
+    margin-left: 70px;
+}
+.editsend{
+    display: flex;
+    text-align: left;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+.editinputtitle{
+    color: white;
+    font-size: 20px;
+    margin-top: 5px; 
+    text-align: left;
+    margin-left: 70px;
+}
+.editimg{
+    text-align: left;
+    margin-left: 70px;
+}
+.editptag_selfintro{
+    border-radius: 3px;
+    border: 2px solid lightgray;
+    text-align: left;
+    margin-left: 70px;
+    width: 340px;
+    height: 200px;
+}
+.usereditimg{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+/* モニターを集めるのページ ================================ */
+.MoniterUploadConteinner{
+    width: 100%;
+    height: 400px;
+}
+.Moniter_heading{
+    margin-top: 20px;
+    margin-left: 10%;
+    color: rgb(6, 174, 240);
+}
+.Moniter_heading_box{
+    width: 60%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    background-color: skyblue;
+    box-shadow: 0 0 8px gray;
+}
+.Moniter_heading_box_text{
+    margin-top: 40px;
+    margin-left: 20px;
+    color: rgb(255, 255, 255);
+}
+.Moniter_heading_img{
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+}
+.moniter_image{
+  border-radius: 5px 5px 0 0;
+  max-width: 100%;
+  height: 200px;
+}
+.Moniter_subheading_box{
+    width: 150px;
+    height: 100px;
+    margin: auto;
+    margin-top: 10px;
+}
+.Moniter_subheading{
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    border-color: skyblue;
+    width: 150px;
+    height: 50px;
+    background-color: skyblue;
+}
+.Moniter_users_heading{
+    margin-left: 10%;
+    color: rgb(6, 174, 240);
+}
+.MoniterBigIndexConteiner{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+.MoniterIndexConteiner{
+  width: 350px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+  display: inline-block;
+  margin-top: 10px;
+}
+.Moniter_card_content{
+    padding: 20px;
+    height: 160px;
+}
+.Monite_card_title{
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+.Moniter_card_text{
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Moniter_card_link{
+    text-align: center;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+.card-link a {
+  text-decoration: none;
+  color: #0bd;
+  margin: 0 10px;
+}
+.card-link a:hover {
+  color: #0090aa;
+}
+.user_pagenate{
+    margin-left: 45%;
+}
+/* ユーザー詳細ページ ================================ */
+.UserShowImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.UserShowName{
+    text-align: center;
+    margin-top: 20px;
+}
+.UserShowIntro h1{
+    margin-left: 10%;
+    font-size: 25px;
+    color: skyblue;
+}
+.UserShowTextfield{
+    width: 80%;
+    height: auto;
+    color: white;
+    margin: auto;
+    background-color: skyblue;
+    box-shadow: 0 0 8px gray;
+}
+.UserShowUpdates h2{
+    margin-left: 10%;
+    font-size: 25px;
+    color: skyblue;
+}
+.UserShowContentWraper{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    background-color: skyblue;
+    box-shadow: 0 0 8px gray;
+    margin-top: 15px;
+}
+.UserShowtitlemoniter{
+    display: flex;
+}
+.UserShowMainContent{
+    margin: 0 15px;
+}
+.UserShowLink{
+    display: inline-block;
+    color: white;
+    justify-content: left;
+    margin-right: 15px;
+}
+.UserShowSend{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
