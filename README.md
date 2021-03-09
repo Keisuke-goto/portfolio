@@ -30,16 +30,16 @@
 
 ・主なgem
 
-gem rails-i18n
+　gem rails-i18n
 
-gem kaminari
+　gem kaminari
 
-gem bcrypt
+　gem bcrypt
 
-gem bootstrap
+　gem bootstrap
 
 開発環境
 
-・Homebrew
+ ・Homebrew
 
-・rbenv
+ ・rbenv
