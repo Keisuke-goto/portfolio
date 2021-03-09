@@ -26,7 +26,7 @@
 
 ・バックエンド：　Ruby2.7.2（Ruby on Rails6.1.0）
 
-・データベース： SQlite3
+・データベース： SQLite3
 
 ・主なgem
 
